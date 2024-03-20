@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+header {
+    border: 2px solid gray;
+    height: 60px;
+    clear: both;
+}
+
+section {
+    border: 2px solid gray;
+    height: 600px;
+    width: 20%;
+    float: left;
+}
+
+.second {
+    border: 2px solid gray;
+    height: 600px;
+    width: 40%;
+    float: left;
+}
+
+footer {
+    border: 2px solid gray;
+    height: 60px;
+    clear: both;
+}

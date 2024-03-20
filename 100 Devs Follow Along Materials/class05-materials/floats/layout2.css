@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+.first {
+    border: 2px solid gray;
+    height: 60px;
+    clear: both;
+}
+
+.second {
+    border: 1px solid gray;
+    height: 190px;
+}
+
+.short {
+    border: 1px solid gray;
+    height: 190px;
+    width: 35%;
+    float: left;
+}
+
+.long {
+    border: 1px solid gray;
+    height: 190px;
+    width: 65%;
+    float: left;
+}
+
+footer {
+    border: 2px solid gray;
+    height: 60px;
+    clear: both;
+}
