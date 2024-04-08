@@ -61,6 +61,8 @@ nav > a {
 
 aside{
   width: 40%;
+  padding-bottom: 327px;
+  border-bottom: 1px solid lightgray;
 }
 
 nav {
@@ -78,6 +80,7 @@ nav ul > li {
 
 section{
   float: left;
+  width: auto;
 }
 
 section > section {
@@ -132,6 +135,19 @@ main > h1 {
   clear: both;
 }
 
+#wonderWoman{
+  font-size: 40px;
+}
+
+section > section + section p {
+  color: gray;
+  font-size: 30px;
+}
+
+
+section > img {
+  
+}
 
 /******************************************
 /* ADDITIONAL STYLES
