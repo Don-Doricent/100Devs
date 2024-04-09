@@ -42,6 +42,10 @@ header nav  li{
   width: 33%;
 }
 
+header > nav {
+  border-bottom: 1px solid black;
+}
+
 main > section {
   float: left;
   height: 600px;
