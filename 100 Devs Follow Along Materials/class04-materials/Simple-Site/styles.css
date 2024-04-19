@@ -124,5 +124,7 @@ h2 {
 
 img {
     float: right;
+    overflow: auto;
+    max-width: 500px;
 
 }
