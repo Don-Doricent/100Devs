@@ -124,6 +124,6 @@ h2 {
 }
 
 img {
-    max-width: 100%;
-
+    float: right;
+    width: 100px;
 }
