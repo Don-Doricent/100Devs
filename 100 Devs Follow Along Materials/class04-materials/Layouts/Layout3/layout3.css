@@ -1,3 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 header {
     border: 1px solid gray;
     height: 50px;
@@ -38,4 +45,10 @@ footer{
     height: 50px;
     box-sizing: border-box;
     clear: both;
+}
+
+@media (min-width: 1000px) {
+    .two {
+        background: green;
+    }
 }
