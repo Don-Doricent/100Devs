@@ -29,7 +29,33 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
+section {
+  border: 2px solid black;
+}
 
+.top {
+  height: 200px;
+  width: 100%;
+  float: left;
+}
+
+.middle-top {
+  height: 300px;
+  float: left;
+  width: 33.3333%;
+}
+
+.middle-bottom {
+  height: 200px;
+  width: 50%;
+  float: left;
+}
+
+.bottom {
+  clear: both;
+  height: 300px;
+
+}
 
 /******************************************
 /* ADDITIONAL STYLES
