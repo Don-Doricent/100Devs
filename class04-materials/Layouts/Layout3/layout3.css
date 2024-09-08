@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    border: 1px solid gray;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.one {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+.two {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    height: 300px;
+    width: 40%;
+    float: left;
+}
+.three {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+.four {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+
+footer{
+    border: 1px solid gray;
+    height: 50px;
+    box-sizing: border-box;
+    clear: both;
+}
+
+@media (min-width: 1000px) {
+    .two {
+        background: green;
+    }
+}

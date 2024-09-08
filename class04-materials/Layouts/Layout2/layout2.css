@@ -1,0 +1,42 @@
+/* 
+
+/*
+
+==========================
+
+Custom Styles
+
+=========================
+
+*/
+
+header {
+    height: 100px;
+    border: 1px solid gray;
+}
+
+.topSection {
+    height: 200px;
+    border: 1px solid gray;
+}
+
+.bottomSection1 {
+    height: 200px;
+    width: 33.3333%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+}
+.bottomSection2 {
+    height: 200px;
+    width: 66.6666%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+}
+
+footer {
+    height: 100px;
+    border: 1px solid gray;
+    clear: both;
+}

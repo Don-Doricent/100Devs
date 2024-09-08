@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+
+=========================
+
+Custom Styles
+
+========================
+
+*/
+
+section {
+    border: 2px solid black;
+    height: 600px;
+    overflow: hidden;
+}
+
+.topSection {
+    background-image: url(shutterstock_1108602593.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+a{
+    padding-top: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    gap: 40px;
+    font-size: large;
+}
+
+
+
+.title h1{
+    display: flex;
+    font-size: 70px;
+}
+
+.title {
+    display: flex;
+    padding-top: 79px;
+    padding-left: 123px;
+}
+
+Section h1 {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 50px;
+}
+
+.searchBar {
+    display: flex;
+    padding-top: 18px;
+    padding-left: 176px;
+}
+
+section input {
+    display: flex;
+    width: 420px;
+}
+
+section button {
+    display: flex;
+    background-color: #ff8800;
+    padding: 10px 20px;
+    border-radius: 10%;
+} 
+
+.socialMedia {
+    display: flex;
+    padding-top: 57px;
+    gap: 70px;
+    padding-left: 173px;
+}
+
+.midSection {
+    display: block;
+    overflow: hidden;
+}
+
+.aboutUs {
+    display: flex;
+    justify-content: center;
+    padding: 53px 507px 0 0;
+    color: #ff8800;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.midTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.midTitle > h1 {
+    font-size: 60px;
+    padding-right: 231px;
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 471px;
+    padding-right: 200px;
+}
+
+.menuButton {
+    display: flex;
+    justify-content: center;
+}
+
+.bottomSection {
+    display: flex;
+}
+
+.bottomTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+

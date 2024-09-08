@@ -1,0 +1,154 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto' , sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+nav,main,aside{
+  float: left;
+  width: 10%;
+}
+
+main{
+  width: 50%;
+  margin-bottom: 5%;
+  border-bottom: 1px solid lightgray;
+}
+
+
+main img {
+  float: left;
+  padding-top: 10px;
+  width: 100%;
+}
+
+nav > a {
+  color: gray;
+  padding: none;
+}
+
+aside{
+  width: 40%;
+  padding-bottom: 327px;
+  border-bottom: 1px solid lightgray;
+}
+
+nav {
+  
+  padding-right: 20px;
+  
+}
+
+nav ul > li {
+  list-style: none;
+  color: gray;
+  margin: 12%;
+  font-size: 25px;
+}
+
+section{
+  float: left;
+  width: auto;
+}
+
+section > section {
+  float: left;
+  width: 33.3333%;
+}
+
+section > section img {
+  width: 100%;
+  height: 75%;
+}
+
+aside ul > li {
+  border-bottom: 1px solid black;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-weight: bold;
+  list-style: none;
+}
+
+aside ul > li + li + li + li {
+  border-bottom: none;
+}
+
+nav > img {
+  height: 150px;
+}
+
+nav > a {
+  font-size: 25px;
+  padding-left: 40px;
+  
+}
+
+.author {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#mainParagraph {
+  color: gray;
+  font-size: 28px;
+}
+
+main > h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#theLatest {
+  float: left;
+  clear: both;
+}
+
+#wonderWoman{
+  font-size: 40px;
+}
+
+section > section + section p {
+  color: gray;
+  font-size: 30px;
+}
+
+
+section > img {
+  
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

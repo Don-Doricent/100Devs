@@ -1,0 +1,23 @@
+header {
+    border: 1px solid black;
+    height: 20px;
+    clear: both;
+}
+
+
+
+section{
+    border: 1px solid black;
+    width: 33.25%;
+    height: 100px;
+    float: left;
+    @media all (min-width: 200px) {
+        color: red;
+    }
+}
+
+footer {
+    border: 1px solid black;
+    height: 20px;
+    clear: both;
+}

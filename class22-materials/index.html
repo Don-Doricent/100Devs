@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div>
+    <! put your HTML code to input data here >
+
+    <div class="container">
+        <form id="signup" class="form">
+            <div class="form-field">
+                <label for="uid"> User Id:</label>
+                <input type="text" name="uid" id="uid" autocomplete="off">
+                <small></small> <!-- This will show the error message to the users -->
+            </div>
+
+            <div class="form-field">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="birthday" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <input type="submit" value="Accept">
+            <div>
+        </form>
+</div>
+
+<script>
+    // put your JavaScript code to read HTML inputs
+    const useridEl = document.querySelector('#uid');
+    const fnameEl = document.querySelector('#fname');
+    const lnameEl = document.querySelector('#lname');
+    const birthdayEl = document.querySelector('#birthday');
+
+    const form = document.querySelector('#signup');
+
+    const isRequired = value => value === '' ? false : true;
+
+    let isUserIdValid = (uid) => {
+        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+        return re.test(uid);
+    };
+
+    const showError = (input, message) => {
+        const formField = input.parentElement;
+        formField.classList.remove('success');
+        formField.classList.add('error');
+
+        const error = formField.querySelector('small');
+        error.textContent = message;
+    };
+
+    const showSuccess = (input) => {
+        const formField = input.parentElement;
+        formField.classList.remove('error');
+        formField.classList.add('success');
+
+        const error = formField.querySelector('small');
+        error.textContent = '';
+    };
+
+    // and validate inputs here using if statements
+    const checkUserId = () => {
+        let valid = false;
+        const uid = useridEl.value.trim();
+        if (!isRequired(uid)) {
+            showError(useridEl, 'User Id cannot be blank.');
+        } else if (!isUserIdValid(uid)) {
+            showError(useridEl, 'Invalid User Id')
+        } else {
+            showSuccess(useridEl);
+            valid = true;
+        }
+        return valid;
+    }
+
+   const checkFirstName = () => {
+        let valid = false;
+        const fname = fnameEl.value.trim();
+
+        if (!isRequired(fname)) {
+        showError(fnameEl, 'Invalid fname');
+        } else {
+            showSuccess(fnameEl);
+            valid = true;
+        }
+        return valid;
+   }
+
+   const checkLastName = () => {
+        let valid = false;
+        const lname = lnameEl.value.trim();
+
+        if (!isRequired(lname)) {
+        showError(lnameEl, 'Invalid lname');
+        } else {
+            showSuccess(lnameEl);
+            valid = true;
+        }
+        return valid;
+   }
+
+   const checkBirthday = () => {
+        let valid = false;
+        const birthday = birthdayEl.value.trim();
+
+        if (!isRequired(birthday)) {
+        showError(birthdayEl, 'Invalid birthday');
+        } else {
+            showSuccess(birthdayEl);
+            valid = true;
+        }
+        return valid;
+   }
+
+
+    form.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const isUserIdValid = checkUserId();
+        const isFirstNameValid = checkFirstName();
+        const isLastNameValid = checkLastName();
+        const isBirthdayValid = checkBirthday();
+
+        const isFormValid = isUserIdValid && isFirstNameValid && isLastNameValid && isBirthdayValid;
+
+        if (isFormValid) {
+    
+        }
+    });
+
+    // and document.getElementById().innerHTML to display results
+    // write your JS functions here
+    // write your JS Loop For here to print the Xs
+    // use something like document.write(str.padStart(i,"x") + "<br>");
+        
+</script>
+
+</body>
+</html>
