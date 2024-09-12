@@ -58,9 +58,10 @@ NavBar & Header
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #201429;
+	background-color: #a43ff1;
 	padding: 1rem;
 	color: white;
+	height: 100px;
 }
 
 .navbar-main header {
