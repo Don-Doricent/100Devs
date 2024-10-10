@@ -18,23 +18,33 @@ body{
   background-repeat: no-repeat;
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
   margin: 0 auto;
   width: 100%; /* Set the width of the image */
-  max-width: 500px; /* Optional: set a maximum width to ensure it doesn't get too large */
-  height: 300px; /* Set a fixed height */
-  object-fit: cover; /* This ensures the image covers the space and maintains aspect ratio */
+  max-width: 100%; /* Optional: set a maximum width to ensure it doesn't get too large */
+  max-height: 100vh; /* Set a fixed height */
+  object-fit: contain; /* This ensures the image covers the space and maintains aspect ratio */
 }
 
 .content-box {
   background-color: #02caca; /* Set background color to purple */
   padding: 20px; /* Add some padding to create space inside the box */
-  margin: 0 auto; /* Center the box horizontally */
+  margin: 60px auto; /* Center the box horizontally */
   max-width: 800px; /* Set a maximum width for the box */
   border-radius: 10px; /* Optional: Add rounded corners */
   color: white; /* Ensure text is readable against the purple background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a nice effect */
+  min-height: 550px; /* Set a minimum height for the content box */
+
+
 }
 
 h1, h2, h3 {
