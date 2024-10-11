@@ -1,27 +1,49 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
-*{
+/* General reset */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-body{
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
+/* Ensure the content box is centered and responsive */
+.content-box {
+  background-color: #02caca;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: -9px 7px 8px 0px rgb(0, 0, 0);
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Set header styles */
+h1, h2, h3 {
+  color: white;
+  text-align: center;
+}
+
+/* Button container styling to ensure buttons are aligned correctly */
 .button-container {
   display: flex;
   gap: 10px; /* space between buttons */
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensures the buttons stack on small screens */
 }
 
 button {
@@ -33,55 +55,97 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  flex: 1; /* Allow buttons to take up available space */
+  margin: 5px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-img {
+/* Image and iframe adjustments for responsiveness */
+img, iframe {
   display: none;
   margin: 0 auto;
-  max-width: 100%; /* Set the width of the image */
-  max-height: 500px; /* Optional: set a maximum width to ensure it doesn't get too large */
-  object-fit: cover; /* This ensures the image covers the space and maintains aspect ratio */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   object-position: center;
+  border-radius: 5px;
 }
 
-.content-box {
-  background-color: #02caca; /* Set background color to purple */
-  padding: 20px; /* Add some padding to create space inside the box */
-  margin: 30px auto; /* Center the box horizontally */
-  max-width: 800px; /* Set a maximum width for the box */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  color: white; /* Ensure text is readable against the purple background */
-  box-shadow: -9px 7px 8px 0px rgb(0, 0, 0); /* Optional: Add a shadow for a nice effect */
-  min-height: 550px; /* Set a minimum height for the content box */
-  transition: all 0.3s ease-in-out; /* Smooth transitions for height, width, etc. */
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content inside the box */
-
-  /* Add transition for width and height changes */
-
-  transition: width 0.3s ease, height 0.3s ease;
-
+iframe {
+  max-height: 400px; /* Ensure iframe doesn't get too tall */
+  width: 100%;
 }
 
+/* Media queries for responsive design */
 
-h1, h2, h3 {
-  color: white; /* Ensure all headings are white */
+/* Mobile phones (max width: 480px) */
+@media (max-width: 480px) {
+  .content-box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  img, iframe {
+    max-height: 300px; /* Ensure media doesn't overwhelm small screens */
+  }
 }
 
+/* Tablets and medium screens (max width: 768px) */
+@media (max-width: 768px) {
+  .content-box {
+    width: 95%;
+    padding: 20px;
+  }
 
+  button {
+    font-size: 16px;
+  }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  img, iframe {
+    max-height: 400px;
+  }
+}
+
+/* Desktops and large screens (min width: 1024px) */
+@media (min-width: 1024px) {
+  .content-box {
+    max-width: 800px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2, h3 {
+    font-size: 1.6rem;
+  }
+
+  img, iframe {
+    max-height: 500px;
+  }
+}
