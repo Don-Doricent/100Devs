@@ -44,6 +44,7 @@ h1, h2, h3 {
   justify-content: center;
   margin-bottom: 20px;
   flex-wrap: wrap; /* Ensures the buttons stack on small screens */
+  border-radius: 10px;
 }
 
 button {
