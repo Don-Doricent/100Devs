@@ -1,22 +1,6 @@
 //Arrays
 //Your pokemon party order which is a list of pokemon has been leaked to Misty. Please create a function that reverses your list and prints it to the console. 
 
-// let myPokemon = ['pikachu', 'charizard', 'rowlett', 'hitmonlee'];
-
-// myPokemon = myPokemon.reverse()
-
-// console.log(myPokemon)
-
-// ^ this is your work. below is Leon's.
-
-
-function reversePokemon(partyList){
-    console.log( partyList.reverse() )
-}
-
-reversePokemon(['pikachu', 'charizard', 'rowlett', 'hitmonlee'])
-
-
 //Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
 
 //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
