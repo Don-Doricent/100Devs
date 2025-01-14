@@ -12,19 +12,23 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<video autoplay muted loop id="background-video">
+			<source src="/img/7623782-uhd_3840_2160_30fps.mp4" type="video/mp4">
+		</video>
+
 		<div class="content-box">
 			<h1>InfiniteCapture</h1>
 			<div class="button-container">
 				<input type="date"  id="date-input" name="" value="">
 				<button type="button" id="get-media-button" name="button">Get Media</button>
-				<button type="button" id="random-button" name="button">Surprise Me!</button>
+				<button type="button" id="random-button" name="button">Random Media</button>
 			</div>
 
-			<h2>Pick a date: Find a picture!</h2>
+			<h2>Choose Date -> Get Media</h2>
 			<img src="" alt="Picture of The Day">
-			<iframe src="" frameborder="0"></iframe>
+			<iframe src="" class="fade-in" frameborder="0" style="width: 100%; height: 600px;"></iframe>
 			<h3>Explanation</h3>
-			<div id="explanation-text"></div>
+			<div id="explanation-text" class="typwriter-text"></div>
 		</div>
 
 		<script type="text/javascript" src="js/main.js"></script>

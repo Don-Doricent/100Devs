@@ -1,6 +1,8 @@
 document.querySelector('#get-media-button').addEventListener('click', getFetch);
 document.querySelector('#random-button').addEventListener('click', getRandomFetch);
 
+let typewriterTimeout; // Store the timeout to cancel ongoing typewriting
+
 function getFetch() {
   const choice = document.querySelector('input').value;
   fetchData(choice);
@@ -11,7 +13,6 @@ function getRandomFetch() {
   document.querySelector('#date-input').value = randomDate; // Update the date input to show the random date
   fetchData(randomDate); // Fetch and display data for the random date
 }
-
 
 function fetchData(date) {
   const url = `https://api.nasa.gov/planetary/apod?api_key=wWgf6W7bgpC4sCjbP6nqPVUAVUFQjuEg5I2jEW6R&date=${date}`;
@@ -31,7 +32,13 @@ function fetchData(date) {
         document.querySelector('img').style.display = 'none';    // Hide image
       }
 
-      document.querySelector('h3').innerText = data.explanation;
+      // Apply the typewriter effect for the explanation text with a 0.5s delay
+      const explanationText = data.explanation;
+      resetTypewriter(); // Ensure previous typewriting is stopped
+
+      setTimeout(() => {
+        typeWriter(explanationText, "explanation-text", 50); // Adjust speed as desired
+      }, 500); // Delay the start of the typewriter effect by 0.5 seconds
     })
     .catch(err => {
       console.log(`error ${err}`);
@@ -52,5 +59,34 @@ function getRandomDate() {
   return `${year}-${month}-${day}`;
 }
 
+function typeWriter(text, elementId, speed) {
+  let i = 0;
+  const targetElement = document.getElementById(elementId);
+  targetElement.innerHTML = ""; // Clear previous content
 
+  function type() {
+    if (i < text.length) {
+      targetElement.innerHTML += text.charAt(i); // Add each character one at a time
+      i++;
+      typewriterTimeout = setTimeout(type, speed); // Store timeout ID
+    }
+  }
 
+  type();
+}
+
+function resetTypewriter() {
+  clearTimeout(typewriterTimeout); // Clear any ongoing typewriter effect
+  const targetElement = document.getElementById("explanation-text");
+  targetElement.innerHTML = ""; // Clear the text content before starting a new explanation
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const iframe = document.querySelector('iframe'); // Select your iframe
+  iframe.classList.add('fade-in'); // Add the fade-in class
+
+  // Use a timeout to add the show class after 100ms (adjust as needed)
+  setTimeout(() => {
+    iframe.classList.add('show'); // Add the show class to trigger the fade-in effect
+  }, 100);
+});

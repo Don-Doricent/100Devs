@@ -3,6 +3,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #02ff06;
+  font-family: 'bitwiseFont', sans-serif;
+  font-size: 1.2rem;
+}
+
+@font-face {
+  font-family: 'bitwiseFont';
+  src: url('../bitwise-font/Bitwise-m19x.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
 }
 
 /* Body styling */
@@ -14,6 +24,18 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#background-video {
+  position: fixed; /* Keeps the video fixed in the background */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make sure it covers the full width */
+  height: 100%; /* Make sure it covers the full height */
+  object-fit: cover; /* Ensures the video covers the whole background without stretching */
+  z-index: -1; /* Places it behind the content */
+  pointer-events: none; /* Makes sure the video doesn't interfere with any user interactions */
+}
+
 
 /* Ensure the content box is centered and responsive */
 .content-box {
@@ -29,12 +51,17 @@ body {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  position: relative; /* Ensure the content is above the video */
+    z-index: 1; /* Bring content to the front */
+    background-color: rgba(0, 0, 0, 0.7); /* Add some transparency to content box */
 }
 
 /* Set header styles */
 h1, h2, h3 {
   color: white;
   text-align: center;
+  color: #02ff06;
+  font-family: 'bitwiseFont', sans-serif;
 }
 
 /* Button container styling to ensure buttons are aligned correctly */
@@ -49,8 +76,8 @@ h1, h2, h3 {
 
 button {
   padding: 10px 20px;
-  background-color: #ffffff;
-  color: black;
+  background-color: rgba(30, 29, 29, 0.959);
+  color: #02ff06;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -60,8 +87,33 @@ button {
   margin: 5px;
 }
 
+#date-input {
+  background-color: rgba(30, 29, 29, 0.959);
+  color: #02ff06;
+  outline: 2px solid rgba(30, 29, 29, 0.959);
+}
+
+#explanation-text {
+  color: #02ff06;
+  font-family: 'bitwiseFont', sans-serif;
+  font-size: 1.2rem;
+
+}
+
 button:hover {
   background-color: #0056b3;
+}
+
+div h3 {
+  padding: 20px;
+}
+
+div h2 {
+  padding: 20px;
+}
+
+.explanation-text {
+  color: #02ff06;
 }
 
 /* Image and iframe adjustments for responsiveness */
@@ -76,8 +128,14 @@ img, iframe {
 }
 
 iframe {
-  max-height: 400px; /* Ensure iframe doesn't get too tall */
+  display: block; /* make sure iframe takes up its full width */
+  margin: 0 auto;
   width: 100%;
+  max-height: 500px; /* Adjust to your desired maximum height */
+  height: auto; /* Keep aspect ratio intact */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
 }
 
 /* Media queries for responsive design */
@@ -147,6 +205,38 @@ iframe {
   }
 
   img, iframe {
-    max-height: 500px;
+    height: auto;
   }
+}
+
+
+/* CSS for typewriter effect */
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter-text {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* Add this to your CSS file or within a <style> tag */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Adjust the duration (1s) as needed */
+}
+
+.fade-in.show {
+  opacity: 1;
 }
